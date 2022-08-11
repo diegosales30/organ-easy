@@ -22,8 +22,7 @@ const Header = () => {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        bg={useColorModeValue("gray.50", "gray.900")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -32,13 +31,8 @@ const Header = () => {
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
-        <Flex
-          flex={{ base: 1 }}
-          justify={{ base: "start", md: "start" }}
-          bg={useColorModeValue("gray.100", "gray.800")}
-        >
+        <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
           <Heading
-            bg={useColorModeValue("gray.100", "gray.800")}
             fontWeight={600}
             fontSize={{ base: "1xl", sm: "2xl", md: "3xl" }}
             lineHeight={"110%"}
