@@ -6,11 +6,27 @@ import {
   Text,
   Button,
   Image,
+  useToast,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logoLanding.png";
 
 const LandingPage = () => {
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    toast({
+      description: `Bem-vindo!`,
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position: "top",
+    });
+    return navigate(path);
+  };
+
   return (
     <Container maxW={"5xl"}>
       <Stack
@@ -43,6 +59,7 @@ const LandingPage = () => {
             colorScheme={"orange"}
             bg={"orange.400"}
             _hover={{ bg: "orange.500" }}
+            onClick={() => handleNavigation("/home")}
           >
             Iniciar
           </Button>
