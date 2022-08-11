@@ -9,7 +9,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-
 import logo from "../../assets/logoLanding.png";
 
 const LandingPage = () => {

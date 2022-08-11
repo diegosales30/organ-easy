@@ -10,11 +10,10 @@ import {
 
 const ComponentInput = () => {
   return (
-    <Box w={"100%"} padding={"30px"}>
+    <Box w={"100%"} padding={"10px"}>
       <FormControl
         padding={5}
         w={"100%"}
-        //h={"50%"}
         boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.3)"}
         borderRadius={"5px"}
       >
