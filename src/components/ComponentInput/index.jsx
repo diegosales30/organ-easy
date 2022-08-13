@@ -26,7 +26,6 @@ const ComponentInput = () => {
     e.preventDefault();
     setList([...list, { description, valor, type }]);
   };
-  console.log(list);
 
   return (
     <Box w={"100%"} padding={"10px"} as={"form"} onSubmit={handleSubmit}>
