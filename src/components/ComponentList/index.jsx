@@ -80,13 +80,7 @@ const ComponentList = () => {
             </Button>
           </Box>
         </Flex>
-        <Box
-          w={"100%"}
-          h={"250px"}
-          //padding={5}
-
-          overflow={"scroll"}
-        >
+        <Box w={"100%"} h={"250px"} overflow={"scroll"}>
           <UnorderedList margin={"auto"} padding={1}>
             {list.length === 0 ? (
               <Heading
