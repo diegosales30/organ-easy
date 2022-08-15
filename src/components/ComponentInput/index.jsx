@@ -6,6 +6,7 @@ import {
   FormLabel,
   Input,
   Select,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { useContext } from "react";
 import { ListContext } from "../../providers/List";
@@ -28,7 +29,13 @@ const ComponentInput = () => {
   };
 
   return (
-    <Box w={"100%"} padding={"10px"} as={"form"} onSubmit={handleSubmit}>
+    <Box
+      w={"100%"}
+      padding={"10px"}
+      as={"form"}
+      onSubmit={handleSubmit}
+      bg={useColorModeValue("white", "gray.800")}
+    >
       <FormControl
         padding={5}
         w={"100%"}

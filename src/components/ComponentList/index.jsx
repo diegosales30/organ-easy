@@ -10,6 +10,7 @@ import {
 import { useContext } from "react";
 import { ListContext } from "../../providers/List";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import RemoveAll from "../RemoveAll";
 
 const ComponentList = () => {
   const { list } = useContext(ListContext);
@@ -165,6 +166,7 @@ const ComponentList = () => {
           </UnorderedList>
         </Box>
       </Box>
+      <RemoveAll />
     </Box>
   );
 };

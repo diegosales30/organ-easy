@@ -1,41 +1,42 @@
-import { Flex, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import ComponentInput from "../ComponentInput";
 import ComponentList from "../ComponentList";
-import RemoveAll from "../RemoveAll";
+
 import TotalValue from "../TotalValue";
 
 const BoxInput = () => {
   return (
-    <Flex
-      w={"100vw"}
-      h={"100vh"}
-      display={["block", "block", "flex", "flex"]}
-      maxW={"1700px"}
-      minW={"380px"}
-      bg={useColorModeValue("white", "gray.800")}
-      justifyContent={"space-between"}
-      //padding={"10px"}
-      margin={"auto"}
-    >
+    <Box w={"100%"} h={"100%"} bg={useColorModeValue("white", "gray.800")}>
       <Flex
-        w={"90%"}
+        w={"100%"}
+        h={"100%"}
+        display={["block", "block", "flex", "flex"]}
+        maxW={"1280px"}
+        minW={"380px"}
+        //bg={useColorModeValue("white", "gray.800")}
+        justifyContent={"space-between"}
         margin={"auto"}
-        justifyContent={"center"}
-        flexDirection={"column"}
       >
-        <ComponentInput />
-        <TotalValue />
+        <Flex
+          w={"90%"}
+          margin={"auto"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+        >
+          <ComponentInput />
+          <TotalValue />
+        </Flex>
+        <Flex
+          w={"90%"}
+          margin={"auto"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+        >
+          <ComponentList />
+          {/* <RemoveAll /> */}
+        </Flex>
       </Flex>
-      <Flex
-        w={"90%"}
-        margin={"auto"}
-        justifyContent={"center"}
-        flexDirection={"column"}
-      >
-        <ComponentList />
-        <RemoveAll />
-      </Flex>
-    </Flex>
+    </Box>
   );
 };
 
