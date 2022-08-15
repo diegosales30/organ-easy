@@ -1,6 +1,15 @@
 import { Box, Flex } from "@chakra-ui/react";
+import { useContext } from "react";
+import { ListContext } from "../../providers/List";
 
 const TotalValue = () => {
+  const { list } = useContext(ListContext);
+
+  const total = list.reduce(
+    (a, b) => (b.type === "Entrada" ? a + b.valor : a - b.valor),
+    0
+  );
+
   return (
     <Box w={"100%"} padding={"30px"}>
       <Flex
@@ -26,7 +35,10 @@ const TotalValue = () => {
           fontSize={"0.9rem"}
           as="span"
         >
-          R$ 0,00{" "}
+          {new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "brl",
+          }).format(total)}
         </Box>
       </Flex>
     </Box>
