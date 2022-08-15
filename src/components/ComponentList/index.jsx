@@ -10,9 +10,12 @@ import {
 import { useContext } from "react";
 import { ListContext } from "../../providers/List";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import RemoveAll from "../RemoveAll";
+import { RemoveContext } from "../../providers/Remove";
 
 const ComponentList = () => {
   const { list } = useContext(ListContext);
+  const { deleteItem } = useContext(RemoveContext);
 
   console.log(list);
   return (
@@ -118,7 +121,17 @@ const ComponentList = () => {
                       marginRight={"5px"}
                       alignItems={"end"}
                     >
-                      <RiDeleteBin2Line cursor={"pointer"} color={"#ff6961"} />
+                      <Button
+                        onClick={() => deleteItem(index)}
+                        padding={0}
+                        bg={"transparent"}
+                      >
+                        <RiDeleteBin2Line
+                          cursor={"pointer"}
+                          color={"#ff6961"}
+                        />
+                      </Button>
+
                       <Text as={"p"} marginTop={1} fontSize={"0.8rem"}>
                         {new Intl.NumberFormat("pt-br", {
                           style: "currency",
@@ -131,7 +144,6 @@ const ComponentList = () => {
                   <ListItem
                     key={index}
                     borderLeft={"2px solid #ff4040"}
-                    //h={"50px"}
                     borderRadius={"4px"}
                     listStyleType={"none"}
                     boxShadow={"0px 0px 10px rgba(0, 0, 0, 0.3)"}
@@ -150,7 +162,15 @@ const ComponentList = () => {
                       marginRight={"5px"}
                       alignItems={"end"}
                     >
-                      <RiDeleteBin2Line cursor={"pointer"} color={"#ff6961"} />
+                      <Button
+                        onClick={() => deleteItem(index)}
+                        bg={"transparent"}
+                      >
+                        <RiDeleteBin2Line
+                          cursor={"pointer"}
+                          color={"#ff6961"}
+                        />
+                      </Button>
                       <Text as={"p"} marginTop={1} fontSize={"0.8rem"}>
                         {new Intl.NumberFormat("pt-br", {
                           style: "currency",
@@ -165,6 +185,7 @@ const ComponentList = () => {
           </UnorderedList>
         </Box>
       </Box>
+      <RemoveAll />
     </Box>
   );
 };
