@@ -23,6 +23,7 @@ Instale as dependencias:
 yarn add react-icons
 yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6 @chakra-ui/icons
 yarn add swiper
+yarn add react-router-dom
 
 ```
 
