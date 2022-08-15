@@ -2,7 +2,7 @@
 
 > Status do Projeto: Em Andamento 🕐:
 
-Teste a aplicação aqui -->
+Teste a aplicação aqui --> https://organ-easy.vercel.app
 
 ### Tecnologias:
 
