@@ -84,7 +84,7 @@ const ComponentInput = () => {
               onChange={(event) => setType(event.target.value)}
             >
               <option value="Entrada">Entrada</option>
-              <option value="Saída">Saida</option>
+              <option value="Despesas">Saida</option>
             </Select>
           </Box>
         </Flex>
