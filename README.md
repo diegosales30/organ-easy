@@ -26,7 +26,7 @@ yarn add swiper
 yarn add react-router-dom
 
 ```
-
+,,,
 Execute a aplicação:
 
 ```
